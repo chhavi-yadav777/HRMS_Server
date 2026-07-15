@@ -4,7 +4,11 @@ let jwt =  require("jsonwebtoken");
 let bcrypt = require("bcrypt")
 let mongoose = require("mongoose");
 
-let SECRET_KEY = "HRMS";
+
+
+let dotenv = require("dotenv");
+dotenv.config();
+let SECRET_KEY = process.env.SECRET_KEY;
 
 // // let SignUp = async(req,res ) =>{
 //     console.log(req.body);
